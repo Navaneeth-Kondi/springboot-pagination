@@ -18,9 +18,4 @@ public class EmployeeController {
     public EmployeeDTO fetchAllEMployees(@RequestParam(value = "page", defaultValue = "1") int page) {
         return employeeService.getEmployees(page);
     }
-
-    @PostMapping("/employees")
-    public void addEmployees() {
-        employeeService.createEmployees();
-    }
 }

@@ -22,10 +22,4 @@ public class EmployeeService {
         Pageable pageable = PageRequest.of(page, 5, Sort.Direction.DESC, "dateOfJoining");
         return new EmployeeDTO(employeeRepository.findAll(pageable));
     }
-
-    public void createEmployees() {
-        for(int t= 1; t<=100; t++) {
-            employeeRepository.save(new Employee("First"+t, "Last"+t,1000.06*t, new Date(),"Development", "Contract", "email"+t+"@gmail.com",t+"90876543", "Address +"+t ));
-        }
-    }
 }
